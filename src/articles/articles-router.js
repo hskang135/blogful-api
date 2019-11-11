@@ -1,11 +1,8 @@
-/* eslint-disable eqeqeq */
-/* eslint-disable quotes */
 const express =require('express');
 const xss = require('xss');
 const articlesRouter = express.Router();
 const jsonParser = express.json();
 const path = require('path');
-
 const ArticlesService = require('./articles-service');
 
 const serializeArticle = article => ({
@@ -36,7 +33,6 @@ articlesRouter
       const { title, content, style, author } = req.body;
       const newArticle = { title, content, style };
 
-      
       //refactoring for if(!title) and (!content)
       for (const [key, value] of Object.entries(newArticle)) {
         if (value == null) {
