@@ -1,7 +1,7 @@
 const knex = require('knex');
 const app = require('../src/app');
 const { makeArticlesArray, makeMaliciousArticle } = require('./articles.fixtures');
-const { makeUsersArray } = require('./users.fixtures');
+const { makeUsersArray } = require('./users-fixtures');
 
 describe('Articles Endpoints', function() {
   let db;

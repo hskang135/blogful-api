@@ -6,7 +6,7 @@ const helmet = require('helmet');
 const usersRouter = require('./users/users-router');
 const { NODE_ENV } = require('./config');
 const app = express();
-const ArticlesService = require('./articles-service');
+const ArticlesService = require('./articles/articles-service');
 const commentsRouter = require('./comments/comments-router');
 
 const morganOption = (NODE_ENV === 'production')
